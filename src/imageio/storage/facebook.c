@@ -699,11 +699,12 @@ static gboolean _server_callback(GHashTable *query, gpointer user_data)
     ui_authenticate_finish(ui, TRUE);
 
     dt_control_log(_("authentication successful"));
+      printf("AUTH OK\n");
     return TRUE;
   }
 
   dt_control_log(_("authentication failed"));
-
+  printf("ERROR\n");
   return FALSE;
 }
 
